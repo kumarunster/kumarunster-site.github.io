@@ -1,0 +1,137 @@
+---
+layout: burndownChart
+title: All Posts
+---
+
+<!-- <style>
+	#chart svg {
+		height: 400px;
+	}
+
+</style> -->
+
+<div class="container">
+
+<div class="row">
+	
+	<div class="col-md-12 col-lg-12">
+		<h3>Wann wird das Projekt fertig?</h3>
+		
+		<p>
+			Wie oft müssten Sie Phrasen hören wie
+
+			<blockquote>
+				<p>Wir können Fertigstellungsdatum nicht prognosieren, weil der Auftraggeber ständig neue Anforderungen stellt.
+				Wenn wir endlich mal keine neue Anforderungen bekommen und Scope fixieren...</p>
+			</blockquote>
+			<blockquote>
+				<p>Wir wissen nicht wann der Release statt findet, weil Entwickler ständig falsch schätzen. 
+					Wenn sie endlich mal lernen richtig zu schätzen...</p>
+			</blockquote>
+			<blockquote>
+				<p>Wir können keine Schätzung abgeben, weil Teamgeschwindigkeit ständig wechselt. 
+					Wenn wir endlich mal stabile Geschwindigkeit haben werden...</p>
+			</blockquote>	
+			
+		</p>
+		
+		<p>
+			Wir versuchen mit mathematischen Modellen auf Basis der Wahrscheinlichkeitsrechnung, dem Problem entgegen zu wirken
+			und verlässliche Prognosen mit einer bestimmten Wahrscheinlichkeit zu treffen.
+		</p>
+		<p>
+			Mit Hilfe des unteren Diagramm können Sie experemtieren und Sehen, wann die Projekte wirklich fertig werden.<br/>
+			Initial können wir eine Aussage treffen, dass <strong>das Beispielprojekt in Interation 16 mit mindestens 80% Wahrscheinlichkeit fertig gestellt wird</strong>.
+		</p>
+		
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+	</div>
+	
+</div>
+
+<div class="row">
+	<div class="col-md-4 col-lg-4">
+		<h3>Einstellungen</h3>
+		
+		<p>
+			<strong>MeanVelocity - </strong> Teamgeschwindigkeit im Mittel
+			<br/>
+			<strong>VelocityDev - </strong> Teamgeschwindigkeit Standardabweichung
+			<br/>
+			<strong>MeanInflow - </strong> Zugang von neuen Anforderungen im Mittel
+			<br/>
+			<strong>InflowDev - </strong> Zugang von neuen Anforderungen Standardabweichung
+			<br/>
+			<strong>ConfidenceLevel - </strong> Minimale Grenze für die Wahrscheinlichkeit, in welcher Iteration das Projekt abgeschlossen wird.
+			<br/>			
+		</p>
+		
+	</div>
+	<div class="col-md-4 col-lg-4">
+		<div class="panel panel-default">
+		<div class="panel-heading">Basis Parameter</div>
+			<div class="panel-body">
+			<div class="row">
+				<div class="col-md-6 col-lg-6">
+					<div class="form-group">
+						<label for="meanVelocity">MeanVelocity</label>
+						<input id="meanVelocity" class="form-control" value="15" placeholder="MeanVelocity"/>
+					</div>
+					<div class="form-group">
+						<label for="meanInflow">MeanInflow</label>
+						<input id="meanInflow" class="form-control" value="5" placeholder="MeanInflow"/>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-6">
+					<div class="form-group">
+						<label for="velocityDev">VelocityDev</label>
+						<input id="velocityDev" class="form-control" value="5" placeholder="VelocityDev"/>
+					</div>
+					<div class="form-group">
+						<label for="inflowDev">InflowDev</label>
+						<input id="inflowDev" class="form-control" value="10"  placeholder="InflowDev"/>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="confidenceLevel">ConfidenceLevel</label>
+				<input id="confidenceLevel" class="form-control" value="80"  placeholder="ConfidenceLevel in %"/>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="col-md-4 col-lg-4">
+		<div class="panel panel-default">
+		<div class="panel-heading">Iteration</div>
+			<div class="panel-body">
+			<div class="form-group">
+				<label for="workDone">Work done, in SP</label>
+				<input id="workDone" class="form-control" value="" placeholder="Work done, in SP"/>
+			</div>
+			<div class="form-group">
+				<label for="addedToBacklog">Added to Backlog, in SP</label>
+				<input id="addedToBacklog" class="form-control" placeholder="Added to Backlog, in SP"/>
+			</div>
+			<div class="form-group">
+				<button id="addBtn" class="btn btn-primary" onClick="addIteration();" >Add Iteration</button>
+				<button id="removeBtn" class="btn btn-danger" onClick="removeLastIteration();" >Remove Iteration</button>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+
+<div class="row" >
+	<div class="col-md-12 col-lg-12">
+	<div id="chart" class="panel">
+		<svg style="height: 400px;"></svg>
+	</div>
+	</div>
+</div>
+
+</div>

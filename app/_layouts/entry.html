@@ -1,0 +1,161 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/js/rs-plugin/css/settings.css">
+        
+        <link rel="stylesheet" href="/css/style_library.css">
+        <link rel="stylesheet" href="/css/media.css">
+        <!-- endbuild -->
+</head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="/_bower_components/es5-shim/es5-shim.js"></script>
+      <script src="/_bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+    <div id="global-containter">
+        <div id="main-content">
+            <div id="home_marker"></div>
+            <div id="header" class="">
+                <div class="inner">
+
+                    <!-- start top grey bar -->
+                    <div class="top">
+                        <div class="container">
+                        	<!--
+                        	<div class="row">
+                                <div class="col-md-12 col-xs-12 col-sm-12">
+                                    <div class="contacts_block">
+                                        -- edit social icons here --
+                                        <ul class="social_links clearfix">
+                                            <li><a href="#" class="icon-facebook styler_bg_color"></a></li>
+                                            <li><a href="#" class="icon-twitter styler_bg_color"></a></li>
+                                            <li><a href="#" class="icon-google-plus styler_bg_color"></a></li>
+                                            <li><a href="#" class="icon-github styler_bg_color"></a></li>
+                                        </ul>
+                                        -- edit phone number here --
+                                        <div class="phone styler_color">CALL US TOLL FREE <span>866.877.8899</span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </div>
+                           -->
+                        </div>
+                        <a href="#" class="scrollup" style="display: none;"></a>
+                    </div>
+                    <!-- /end top grey bar -->
+
+                    <!-- start navigation -->
+					{% include entry_navigation.html %}
+                    <!-- /end navigation -->
+
+                    <div id="content">
+
+                        <!--start slider -->
+					<div id="wrapper">
+					<div class="fullwidthbanner-container" id="main_slider">
+                        <div class="fullwidthbanner">
+                        {% include entry_slides.html %}
+                        </div>
+                    </div>
+                    <div class="fullwidthbanner-container" id="contactus_block">
+                    	<div class="container">
+                    		<div class="row">
+                    			<div class="col-md-8 col-lg-8">
+		                        	<span class="contactus_text">Mit uns finden Sie Lösung für Ihr Problem</span>
+		                        </div>
+		                        <div class="col-md-4 col-lg-4">
+		                        	<a href="mailto:info@phirea.com" class="contactus_btn">Kontaktiert uns</a>
+		                        </div>
+	                        </div>
+                        </div>
+                    </div>
+					</div>
+                        <!-- /end slider -->
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div>
+
+
+            {{ content }}
+
+			
+        </div>
+		
+		<!-- start footer -->
+		{% include footer.html %}
+		<!-- end footer -->
+    </div>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <!-- <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>-->
+
+        
+    	<script src="_bower_components/jquery/jquery.js"></script>
+    	<script src="_bower_components/jquery-ui/ui/jquery-ui.js"></script>
+    	<script src="_bower_components/jquery-migrate/jquery-migrate.js"></script>
+    	
+        <!-- build:js({.tmp,app}) scripts/plugins.js -->
+        <script src="/_bower_components/bootstrap-sass/js/affix.js"></script>
+        <script src="/_bower_components/bootstrap-sass/js/alert.js"></script>
+        <script src="/_bower_components/bootstrap-sass/js/dropdown.js"></script>
+        <script src="/_bower_components/bootstrap-sass/js/tooltip.js"></script>
+        <script src="/_bower_components/bootstrap-sass/js/modal.js"></script>
+        <script src="/_bower_components/bootstrap-sass/js/transition.js"></script>
+        <script src="/_bower_components/bootstrap-sass/js/button.js"></script>
+        <script src="/_bower_components/bootstrap-sass/js/popover.js"></script>
+        <script src="/_bower_components/bootstrap-sass/js/carousel.js"></script>
+        <script src="/_bower_components/bootstrap-sass/js/scrollspy.js"></script>
+        <script src="/_bower_components/bootstrap-sass/js/collapse.js"></script>
+        <script src="/_bower_components/bootstrap-sass/js/tab.js"></script>
+        <!-- endbuild -->
+
+        <script src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+        <script src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+        
+        <!-- build:js({app}) scripts/scripts.js -->
+        <script src="/js/main.js"></script>
+        <script src="/js/slider.js"></script>
+        
+         
+        <script src="/_bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.js"></script>
+        <script src="/js/library.js"></script>
+        
+        
+        <script src="/js/function_library.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

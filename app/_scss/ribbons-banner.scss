@@ -1,0 +1,288 @@
+.ribbon {
+ //font-size: 16px !important;
+ /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+
+ width: 50%;
+    
+ position: relative;
+ background: #ba89b6;
+ color: #fff;
+ text-align: center;
+ padding: 1em 2em; /* Adjust to suit */
+ margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+.ribbon:before, .ribbon:after {
+ content: "";
+ position: absolute;
+ display: block;
+ bottom: -1em;
+ border: 1.5em solid #986794;
+ z-index: -1;
+}
+.ribbon:before {
+ left: -2em;
+ border-right-width: 1.5em;
+ border-left-color: transparent;
+}
+.ribbon:after {
+ right: -2em;
+ border-left-width: 1.5em;
+ border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: #804f7c transparent transparent transparent;
+ bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
+}
+
+
+
+
+
+
+.ribbon-left-flat {
+  }
+
+.ribbon-left-flat h1 {
+   background: #e3e3e3;
+   background: -moz-linear-gradient(top, #e3e3e3, #c8c8c8);
+   background: -webkit-gradient(linear, left top, left bottom, from(#e3e3e3), to(#c8c8c8));
+   padding: 10px 20px;
+   margin-left: -20px;
+   margin-top: 0;
+   position: relative;
+   width: 70%;
+
+  -moz-box-shadow: 1px 1px 3px #292929;
+  -webkit-box-shadow: 1px 1px 3px #292929;
+       box-shadow: 1px 1px 3px #292929;
+
+  color: #454545;
+  text-shadow: 0 1px 0 white;
+}
+
+.arrow {
+   width: 0; height: 0;
+   line-height: 0;
+   border-left: 20px solid transparent;
+   border-top: 10px solid #c8c8c8;
+   top: 104%;
+   left: 0;
+   position: absolute;
+}
+
+
+
+
+/**
+ *   ribbot with "arrow"
+ */
+
+@mixin ribbon-arrow-base ($direction) {
+    position:relative;
+    color:#fff;
+    background:#f43059;
+    font-size:1.5em;
+    float:left;
+    clear:both;
+    
+    margin-bottom:20px;
+    text-shadow:1px 2px #d0284b, 0 1px #f96080;
+
+    -moz-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
+    -webkit-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
+    -o-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
+    box-shadow:2px 2px 0 rgba(0,0,0,0.1);
+    
+    @if $direction == "left" {
+      padding:10px 10px 10px 40px;
+      margin-left:-30px;
+       
+      &:before {
+        content:" ";
+        //background:url(../img/css/ribbon.png);
+        display:block;
+        width:10px;
+        height:10px;
+        position:absolute;
+        bottom:0;
+        left:0;
+        margin-bottom:-10px;
+        z-index:-1;
+        
+        border-left: 20px solid transparent;
+        border-top: 10px solid #f53469;
+      }
+    } @else if $direction == "right" {
+      padding:10px 40px 10px 20px;
+      margin-right:-30px;
+      
+      &:after {
+        content:" ";
+        //background:url(../img/css/ribbon.png);
+        display:block;
+        width:10px;
+        height:10px;
+        position:absolute;
+        bottom:0;
+        right:0;
+        margin-bottom:-10px;
+        z-index:-1;
+        
+        border-right: 20px solid transparent;
+        border-top: 10px solid #f53469;
+      }
+    }
+}
+
+
+.ribbon-other-left {
+  @include ribbon-arrow-base("left");
+  
+  float:left;
+}
+
+
+.ribbon-other-right {
+  @include ribbon-arrow-base("right");
+  
+  float:right;
+}
+
+
+
+
+
+
+
+/**
+ *   
+ */
+
+
+@mixin ribbon-texture($colorRibbon, $colorBackground, $colorText, $colorTextShadow) {
+  
+  //font-size: 14px;
+  //line-height: 28px;
+  //margin: 120px 0;
+  
+  margin-left:auto;
+  margin-right:auto;
+  width: 80%;
+  text-align: center;
+  color: $colorText;
+  text-shadow: 0 1px 3px rgba($colorTextShadow, 0.9);
+
+  font-weight: 800;
+  font-family: 'Open Sans', sans;
+  font-size: 36px;
+  line-height: 36px;
+  
+  outline: none;
+  padding: 14px 30px;
+  position: relative;
+  
+  /*A little shadow for 3d effect*/
+  /*Finally another shadow to negate some aspects of the :after element to complete the effect. This drops a shrinked shadow over the :after element with the same color like that of the background. The shadow is shrinked by the same offset amount = 18. And it is moved down by twice the offset amount to cover the entire height of the :after element*/
+  box-shadow: 
+    0 0 10px 0 rgba(0, 0, 0, 0.2), 
+    0 36px 0 -18px $colorBackground;
+
+
+  /*The ribbon ends*/
+  &:before {
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: -10%;
+    z-index: -1;
+    width: 120%;
+    /*We will be using the triangle logic - 2 sided borders and 0 height. That will create negative triangles on the left and right*/
+    height: 0;
+    border: 32px solid rgba(0, 0, 0, 0);
+    border-left: 32px solid $colorBackground;
+    border-right: 32px solid $colorBackground;
+    /*Same color as the container which is the body in this case*/
+  }
+  
+  /*The after pseudo element will negatve the bottom part B1E3E2of the ribbon completing the effect*/
+  &:after {
+    content: '';
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 100%; left: 0;
+    z-index: -1;
+    /*The height of the top border is same as width of the left/right borders for the smoothest effect. The height of the top border is also the same as the offset the :before element has from the top*/
+    border-top: 18px solid #99acb2;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+  }
+  
+  &, &:before {
+    /*Some cool multi-background - we will use a combination of 4 backgrounds to create a cool effect*/
+    background-image: 
+      /*2 grey borders*/
+      linear-gradient(
+        transparent 8%, 
+        rgba(0, 0, 0, 0.1) 8%, 
+        rgba(0, 0, 0, 0.1) 14%, 
+        transparent 14%, 
+        transparent 86%, 
+        rgba(0, 0, 0, 0.1) 86%, 
+        rgba(0, 0, 0, 0.1) 92%, 
+        transparent 92%
+      ), 
+      /*white gloss gradient*/
+      linear-gradient(
+        rgba($colorRibbon, 0.75), 
+        rgba($colorRibbon, 0) 
+      ), 
+      /*thin stripes*/
+      linear-gradient(
+        45deg, 
+        transparent 40%, 
+        rgba(0, 0, 0, 0.1) 40%, 
+        rgba(0, 0, 0, 0.1) 60%, 
+        transparent 60%
+      ), 
+      /*white base*/
+      linear-gradient($colorRibbon, $colorRibbon); 
+      
+      background-size: 
+        cover, /*borders*/
+        cover, /*white gloss*/
+        5px 5px, /*thin stripes*/
+        cover; /*base white*/
+  }
+  
+  &:before, &:after {
+    box-sizing: border-box;
+    /*Fix to make the borders appear on the ribbon ends also*/
+    background-origin: border-box;
+  }
+}
+
+
+.ribbon-white-texture {
+  @include ribbon-texture(#fff, #fff, #fff, #000);
+}
+
+.ribbon-texture-services {
+  @include ribbon-texture(#4199d6, $servicesAreaBackground, #fff, #000);
+}
+
+.ribbon-texture-process {
+  @include ribbon-texture(#ba89b6, $processAreaBackground, #fff, #000);
+}

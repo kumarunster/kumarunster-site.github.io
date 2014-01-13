@@ -1,0 +1,77 @@
+<div id="footer">
+    <div class="top">
+        <div class="container">
+            <div class="row">
+                
+                <div id="footerBlogLinks" class="col-md-8 col-xs-12 col-sm-8">
+					  <!--
+					<div class="row">
+						<h1>
+							<a href="blog/index.html">Letzte Blog Posts</a>
+						</h1>
+					</div>
+					<p class="">
+						
+					</p>
+					
+					<div class="row">
+					  <ul class="posts">
+					    {% for post in site.posts limit:5  %}
+					      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+					    {% endfor %}
+					  </ul>
+				    </div>
+					  -->
+                </div>
+                
+                <div id="footerLawInfo" class="col-md-4 col-xs-12 col-sm-4">
+                    <!-- footer logo here -->
+                    <a id="logo" href="/">
+                    	<div></div>
+                    </a>
+                    <div class="text">
+                    	<br/>
+                		<a href="/impressum.html">Impressum</a><br/>
+                		<a href="/datenschutz.html">Datenschutz</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="container">
+            <div class="row">
+                <!-- enter copyright information here -->
+                <div class="copyrights">
+                	© Copyright <a href="http://www.phirea.com" title="Phirea">Phirea UG (haftungsbeschränkt)</a>
+                	<span id="copyryghtYear"></span> 
+                </div>
+                <script>
+                	var year = new Date().getFullYear();
+                	
+                	var updateYear = function() {
+                		$('#copyryghtYear').text(' ' + year);
+                	};
+                	
+                	
+                	if (window.attachEvent) {
+						window.attachEvent('onload', updateYear);
+					} else {
+						if (window.onload) {
+							var curronload = window.onload;
+							var newonload = function() {
+								curronload();
+								updateYear();
+							};
+							window.onload = newonload;
+						} else {
+							window.onload = updateYear;
+						}
+					}
+                	
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
