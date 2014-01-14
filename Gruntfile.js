@@ -263,9 +263,8 @@ module.exports = function (grunt) {
     		'_bower_components/jquery-migrate/jquery-migrate.js',
             '_bower_components/font-awesome/css/**/*',
             '_bower_components/font-awesome/fonts/**/*',
-            'rs-plugin/js/jquery.themepunch.revolution.min.js',
-            'rs-plugin/js/jquery.themepunch.plugins.min.js'
-            //'favicon.ico',
+            'rs-plugin/**/*',
+            'favicon.ico',
             //'apple-touch*.png'
           ],
           dest: '<%= yeoman.dist %>'
