@@ -8,19 +8,51 @@
 }
 
 
+@media (min-width: 980px) and (max-width: 1200px) {
+
+    
+	#contactus_block {
+	  font-size: 22px;
+	}
+	
+	.contactus_btn {
+	  font-size: 22px;
+	}
+	
+	
+	.contactus_btn:hover {
+	  @extend .contactus_btn;
+	}
+	
+	
+	.contactus_btn:before {
+	}
+}
+
+
 @media (min-width: 768px) and (max-width: 979px) {
 	#wrapper .mod .team .person {
 		width:248px;
 		padding-left:20px;
 	}
-	.navbar-collapse {
+	/*.navbar-collapse {
 		height: 0;
 		overflow: hidden;
 	}
 	.navbar-collapse.collapse {
 		height: 0 !important;
 		overflow: hidden !important;
-	}
+	}*/
+	
+	.slide2 .cap-2 span {
+        font-size: 27px;
+        line-height: 44px;
+    }
+    .slide3 .cap-2 span {
+        font-size: 27px;
+        line-height: 44px;
+    }
+    
     #container.boxed #out {
         width:750px;
         margin:0 auto;
@@ -150,6 +182,7 @@
     .progress_bars_with_numbers .item {
         margin:0 1%;
     }
+    /*
 	#top_menu .nav-pills > li {
 		float:none;
 		margin:0;
@@ -212,6 +245,7 @@
     .navbar .navbar-btn {
         margin-top: 35px;
     }
+    
     #header {
         height: auto;
     }
@@ -222,14 +256,25 @@
         margin-left: -131px;
 		padding:0;
     }
-    .slide2 .cap-2 span {
-        font-size: 27px;
-        line-height: 44px;
-    }
-    .slide3 .cap-2 span {
-        font-size: 27px;
-        line-height: 44px;
-    }
+    */
+    
+    
+	
+	#contactus_block {
+	  font-size: 18px;
+	}
+	
+	.contactus_btn {
+	  font-size: 18px;
+	  padding: 0 10px 0 30px;
+	}
+	
+	.contactus_btn:hover {
+	  @extend .contactus_btn;
+	}
+	
+	.contactus_btn:before {
+	}
 }
 @media (max-width: 767px) {
 
@@ -523,6 +568,24 @@
         font-size: 20px;
         line-height: 32px;
     }
+    
+    
+    
+	#contactus_block {
+	  font-size: 18px;
+	}
+	
+	.contactus_btn {
+	  font-size: 18px;
+	  padding: 0 10px 0 30px;
+	}
+	
+	.contactus_btn:hover {
+	  @extend .contactus_btn;
+	}
+	
+	.contactus_btn:before {
+	}
 }
 @media (max-width: 480px) {
 	#wrapper .mod .carousel ul li {
@@ -682,4 +745,22 @@
     .progress_bars_with_numbers {
         margin-bottom:0;
     }
+    
+    #contactus_block {
+	  font-size: 18px;
+	  line-height: 20px;
+	  min-height: 20px !important;
+	}
+	
+	.contactus_btn {
+	  font-size: 18px;
+	  padding: 0 10px 0 30px;
+	}
+	
+	.contactus_btn:hover {
+	  @extend .contactus_btn;
+	}
+	
+	.contactus_btn:before {
+	}
 }
