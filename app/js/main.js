@@ -17,6 +17,9 @@ var scrollByClick;
     
     topMenu();
     
+    $('#contactus_btn').click(function () {
+        showContactForm();
+    });
     
     //load and remove pinterest stuff
     $.getScript ('http://assets.pinterest.com/js/pinit.js')
@@ -78,3 +81,16 @@ function topMenu(){
     });
 	
 }
+
+function showContactForm() {
+   var signupForm = $('#mc_embed_signup');
+   
+   signupForm.fadeToggle(400, function() {
+       var position = signupForm.offset().top;
+       var offset = 200;
+       
+       $("html, body").animate({ scrollTop: position - offset }, 200);
+   });
+       
+}
+

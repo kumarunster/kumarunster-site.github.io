@@ -14,6 +14,50 @@
 		
         <link rel="stylesheet" href="rs-plugin/css/settings.css">
         
+        <!-- mailchimp form -->
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+		<style type="text/css">
+			#mc_embed_signup {
+				/*
+				background: #fff;
+				clear: left;
+				font: 14px Helvetica, Arial, sans-serif;
+				*/
+				font-size: 16px;
+				line-height: 16px!important;
+				
+				/*
+			    -webkit-transition: all 1.5s ease;
+			    -moz-transition: all 0.5s ease;
+			    -o-transition: all 0.5s ease;
+			    transition: all 0.5s ease;
+			    */
+			   
+			    display: none;
+			}
+			/*
+			.hiddenForm {
+				visibility: hidden;
+				display: none;
+				opacity: 0;
+				width: 0px;
+				height: 0px;
+			}
+			.visibleForm {
+				visibility: visible;
+				display: block;
+				opacity: 1;
+			}
+			*/
+			#mc_embed_signup .mc-field-group .asterisk {
+				position: absolute;
+				top: 30px;
+				right: 10px;
+			}
+			/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+			 We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+		</style>
+        
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="/css/syntax.css">
@@ -85,9 +129,48 @@
                     			<div class="col-sx-8 col-sm-8 col-md-8 col-lg-8">
 		                        	<span class="contactus_text">Mit uns finden Sie die Lösung für Ihr Problem</span>
 		                        </div>
-		                        <div class="col-sx-4 col-sm-4 col-md-4 col-lg-4">
-		                        	<a href="mailto:info@phirea.com" class="contactus_btn">Kontaktiert uns</a>
+		                        <div id="contactus_btn" class="col-sx-4 col-sm-4 col-md-4 col-lg-4">
+		                        	<a href="#" class="contactus_btn" >Kontaktiert uns</a>
 		                        </div>
+	                        </div>
+	                        <div class="row">
+	                        	<div class="col-sx-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6">
+		                        	<!-- Begin MailChimp Signup Form -->
+									
+									<div id="mc_embed_signup" class="hiddenForm">
+									<form action="http://xing.us3.list-manage.com/subscribe/post?u=bbec8fe011c2d3388917e2d34&amp;id=31ab7e25a5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+										
+									<div class="indicates-required"><span class="asterisk">*</span> Pflichtangaben</div>
+									<div class="mc-field-group">
+										<label for="mce-EMAIL">Email-Addresse  <span class="asterisk">*</span>
+									</label>
+										<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+									</div>
+									<div class="mc-field-group">
+										<label for="mce-FNAME">Vorname </label>
+										<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+									</div>
+									<div class="mc-field-group">
+										<label for="mce-LNAME">Nachname </label>
+										<input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+									</div>
+									<div class="mc-field-group">
+										<label for="mce-NOTICE">Ihre Nachricht an uns  <span class="asterisk">*</span></label>
+										<input type="text" value="" name="NOTICE" class="required" id="mce-NOTICE">
+									</div>
+									<div id="mce-responses" class="clear">
+										<div class="response" id="mce-error-response" style="display:none"></div>
+										<div class="response" id="mce-success-response" style="display:none"></div>
+									</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+									<div style="position: absolute; left: -5000px;"><input type="text" name="b_bbec8fe011c2d3388917e2d34_31ab7e25a5" value=""></div>
+									<div class="clear">
+										<input type="submit" value="Email hinterlassen" name="subscribe" class="btn btn-primary">
+									</div>
+									</form>
+									</div>
+									
+									<!--End mc_embed_signup-->
+	                        	</div>
 	                        </div>
                         </div>
                     </div>
